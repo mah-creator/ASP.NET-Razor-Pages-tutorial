@@ -1,0 +1,15 @@
+@page
+@using DotNetAspRazor.Pages;
+@model ExceptionTestModel
+
+<h2>
+    @Model.Message
+</h2>
+@{
+    int a = 1;
+    int b = 0;
+    a /= b;
+}
+<p>@a</p>
+
+<a href="/">Go home</a>
