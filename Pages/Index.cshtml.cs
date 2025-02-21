@@ -5,15 +5,16 @@ namespace DotNetAspRazor.Pages;
 
 public class IndexModel : PageModel
 {
-    private readonly ILogger<IndexModel> _logger;
+    private IDependancy _service;
+    public string serviceText;
 
-    public IndexModel(ILogger<IndexModel> logger)
+    public IndexModel(IDependancy service)
     {
-        _logger = logger;
+        _service = service;
     }
 
     public void OnGet()
     {
-
+        serviceText = _service.DependancyDefinition();
     }
 }
