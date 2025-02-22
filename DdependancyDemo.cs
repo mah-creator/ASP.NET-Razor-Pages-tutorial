@@ -1,20 +1,20 @@
-// This interface defines how a service dependancy constructs a brief difinition about itself
-public interface IDependancy
+// This interface defines how a service dependency constructs a brief difinition about itself
+public interface IDependency
 {
     // this method specified the definition of a service implementation
     public string ServiceDefinition();
 
-    // this method formats the final dependancy message
-    public string DependancyDefinition()
+    // this method formats the final dependency message
+    public string DependencyDefinition()
     {
-        return $"This is a dependancy of an app, the service-specific message is \"{ServiceDefinition()}\"";
+        return $"This message is from a service dependency implementing the IDependency interface, the service-specific message is \"{ServiceDefinition()}\"";
     }
 }
 
-// The following class implements an Email sender service dependancy
-public class EmailSenderService : IDependancy
+// The following class implements an Email sender service dependency
+public class DemoService : IDependency
 {
-    private const string serviceDefinition = "This an Email sending service";
+    private const string serviceDefinition = "This an Demo service";
 
     public string ServiceDefinition()
     {

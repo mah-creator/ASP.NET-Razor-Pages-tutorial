@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting.StaticWebAssets;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddScoped<IDependancy, EmailSenderService>();
+builder.Services.AddScoped<IDependency, DemoService>();
 
 // Add services to the container.
 builder.Services.AddRazorPages();
