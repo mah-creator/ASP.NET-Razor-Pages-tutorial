@@ -2,7 +2,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting.StaticWebAssets;
 
 var builder = WebApplication.CreateBuilder(args);
-
+// access DI container services
 builder.Services.AddScoped<IDependency, DemoService>();
 
 // Add services to the container.
