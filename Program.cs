@@ -1,2 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿StudentDbContext dbContext = new StudentDbContext();
+
+Student student = new Student();
+student.Id = 1;
+student.Name = "Sam";
+student.Major = "Phy";
+dbContext.Students.Add(student);
+
+dbContext.SaveChanges();
