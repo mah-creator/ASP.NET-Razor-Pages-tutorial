@@ -1,7 +1,13 @@
 // model of student entity
+using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore;
+
 public class Student
 {
-    private string Id { set; get; }
-    private string Name { set; get; }
-    private string Major { set; get; }
+    [Required]
+    public int Id { set; get; }
+    [Required]
+    public string Name { set; get; } 
+    [Required]
+    public string Major { set; get; }
 }
